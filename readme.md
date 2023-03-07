@@ -57,3 +57,16 @@
     inputs.forEach(input=>input.addEventListener('change',handleUpdate))
     inputs.forEach(input=>input.addEventListener('mousemove',handleUpdate))
 ```
+
+## day4
+
+### Array function
++ filter() : 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환
++ sort() : 배열의 원소를 알파벳순으로, 또는 지정된 함수에 따른 순서로 정렬한다. 모든 원소를 문자열로 취급해 사전적으로 정렬
++ reduce() : 
++ console.table: console에 table형태로 출력해줌
++ 비구조화 할당
+  ```javascript
+      const [prevLast, prevFirst] = prev.split(', ')
+      const [nextLast, nextFirst] = next.split(', ')
+  ```
