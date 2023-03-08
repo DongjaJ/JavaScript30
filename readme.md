@@ -61,9 +61,31 @@
 ## day4
 
 ### Array function
-+ filter() : 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환
-+ sort() : 배열의 원소를 알파벳순으로, 또는 지정된 함수에 따른 순서로 정렬한다. 모든 원소를 문자열로 취급해 사전적으로 정렬
-+ reduce() : 
++ Array.prototype.filter() : 지정된 함수의 결과 값을 true로 만드는 원소들로만 구성된 별도의 배열을 반환
+```javascript
+      // 1500년대에 태어난 inventor의 배열
+      const fifteen = inventors.filter(inventor=>inventor.year >= 1500 && inventor.year < 1600)
+  ```
++ Array.prototype.sort() : 조건에 맞게 두 원소를 비교해 배열을 정렬한다.
+```javascript
+      // 나이순으로 inventor 정렬
+      const oldest = inventors.sort((a,b)=>{
+      const prevAge = a.passed-a.year;
+      const nextAge = b.passed-b.year;
+      return nextAge - prevAge;
+    })
+  ```
++ Array.prototype.map() : 배열을 이용해 조건에 맞는 새로운 배열을 반환
+```javascript
+      // inventor의 firstname과 lastname을 이용해 fullname 배열
+      const fullName = inventors.map(inventor=> `${inventor.first} ${inventor.last}`)
+  ```
++ Array.prototype.reduce() : 반복해서 배열의 값을 반환하는데 이것이 누적된다.
+```javascript
+    // inventor의 나이의 합
+    const totalYear = inventors.reduce((total,inventor)=> total + (inventor.passed - inventor.year),0)
+  ```
+### ETC
 + console.table: console에 table형태로 출력해줌
 + 비구조화 할당
   ```javascript
