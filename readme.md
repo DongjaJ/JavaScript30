@@ -28,7 +28,6 @@
 + setInterval(function,time) : time마다 function수행
 + transform-origin : 어디를 기준으로 애니메이션 수행할지 조절 (ex) 회전할때 어디를 축으로 회전할지
 
-
 ## day3
 
 + css 변수 : --를 앞에 붙이면 css변수로 사용할 수 있다 
@@ -92,3 +91,8 @@
       const [prevLast, prevFirst] = prev.split(', ')
       const [nextLast, nextFirst] = next.split(', ')
   ```
+  
+  ## day5
+
++ transitionend : transition이 끝났을때 이벤트
++ e.propertyName: transition Event에서 어떤 속성이 변했는지 알려준다
